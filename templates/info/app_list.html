@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic Application Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<header id="header" class="page-topbar">
+    <div class="navbar-fixed">
+        <nav class="navbar-color">
+            <div class="nav-wrapper">
+                <div class="form-group col-sm-4">
+                    <br>
+                    <a href="/">Application Form</a> &emsp;
+                    <a href="/logout">Logout</a>
+                    <br>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<body>
+
+<div class="container">
+    <h2>Applications List</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for each in app_list %}
+        <tr class="info">
+            <td>{{ each.name }}</td>
+            <td>{{ each.email }}</td>
+            <td>{{ each.phone }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+

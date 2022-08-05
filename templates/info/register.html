@@ -1,0 +1,67 @@
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic Application Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<header id="header" class="page-topbar">
+    <div class="navbar-fixed">
+        <nav class="navbar-color">
+            <div class="nav-wrapper">
+                <div class="form-group col-sm-4">
+                    <br>
+                    <a href="/">Application Form</a>
+                    <br>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <br>
+    <br>
+
+    <h2>Registration Form</h2>
+    <br>
+    <br>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="form-group col-sm-8"><br>
+            <button type="submit" class="btn btn-primary">Register</button>
+            <br>
+            <br>
+            <p>Go back to <a href="/login">login</a> page</p>
+            <br>
+        </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            Copyright © 2022. </a> All rights reserved.
+            <span class="right"> Developed by <a class="grey-text text-lighten-4"
+                                                 href="https://github.com/AsifAhmed16">Asif Ahmed</a></span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
